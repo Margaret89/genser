@@ -1,0 +1,86 @@
+﻿/*----------- top-slider -------------*/
+.top-slider{
+	position: relative;
+	margin-bottom: 35px;
+
+	&__list,
+	&__item{
+		height: 640px;
+		overflow: hidden;
+	}
+
+	&__item{
+		display: flex !important;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: $color-white;
+	}
+
+	&__label{
+		@include font(normal, 500, 21px, 1.15, $color-white);
+		margin-bottom: 35px;
+	}
+
+	&__head{
+		@include font(normal, bold, 50px, 1.15, $color-white);
+		margin-bottom: 50px;
+	}
+
+	&__counter-wrap{
+		position: absolute;
+		bottom: 55px;
+		left: 15px;
+	}
+
+	&__counter{
+		display: block;
+		width: 110px;
+		text-align: center;
+		@include font(normal, normal, 28px, 1, $color-white);
+		margin-left: 30px;
+
+		span{
+			@include font(normal, 500, 15px, 1, #838486);
+		}
+	}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 30px;
+		height: 14px;
+		outline: 0;
+		border: 0;
+		font-size: 0;
+		padding: 0;
+		margin: 0;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: absolute;
+		@include top-center;
+		cursor: pointer;
+	}
+
+	.slick-prev{
+		left: 0;
+		background-position: -5px  -35px
+	}
+
+	.slick-next{
+		left: 140px;
+		background-position: -50px  -35px
+	}
+
+	.slick-prev:hover{
+		background-position: -5px  -60px
+	}
+
+	.slick-next:hover{
+		background-position: -50px  -60px
+	}
+
+	.btn{
+		min-width: 220px;
+	}
+}

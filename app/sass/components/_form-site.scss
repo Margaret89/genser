@@ -1,10 +1,6 @@
 ﻿/*----------- form-site -------------*/
 .form-site-popup{
 	max-width: 360px;
-
-	input[type="submit"].btn{
-		font-weight: 600;
-	}
 }
 
 .form-site{
@@ -48,6 +44,50 @@
 
 	.btn{
 		width: 100%;
+	}
+
+	&--hor{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: $color-white;
+		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+		padding: 35px;
+	}
+
+	&--hor &__text{
+		@include font(normal, 500, 32px, 1.15, $color-text);
+		text-align: left;
+		width: calc(100% - 720px);
+		padding-right: 40px;
+	}
+
+	&--hor &__text,
+	&--hor &__fields,
+	&--hor input[type="text"],
+	&--hor input[type="mail"],
+	&--hor textarea{
+		margin: 0;
+	}
+
+	&--hor input[type="text"],
+	&--hor input[type="mail"],
+	&--hor textarea{
+		margin-right: 30px;
+		width: 220px;
+	}
+
+	&--hor &__fields{
+		display: flex;
+		align-items: center;
+	}
+
+	&--hor .btn{
+		width: 220px;
+	}
+
+	input[type="submit"].btn{
+		font-weight: 600;
 	}
 }
 

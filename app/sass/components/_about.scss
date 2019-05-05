@@ -1,0 +1,43 @@
+﻿/*----------- about -------------*/
+.about-wrap{
+	margin-top: 45px;
+}
+
+.about{
+	background: url(#{$path-img}/bg-about.jpg) no-repeat center;
+	padding: 82px 125px 90px;
+	color: $color-white;
+
+	&__head{
+		@include font(normal, 500, 40px, 1.15, $color-white);
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	&__list{
+		display: flex;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 55px;
+	}
+
+	&__num{
+		@include font(normal, 500, 80px, 1, $color-white);
+		margin-right: 20px;
+	}
+
+	&__unit{
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	&__text{
+		@include font(normal, 500, 15px, 1.45, $color-white);
+	}
+}
