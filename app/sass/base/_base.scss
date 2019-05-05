@@ -62,9 +62,16 @@ h6,
 }
 
 .wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
+}
+
+main{
+	flex: 1;
 }
 
 .btn,
@@ -116,3 +123,11 @@ input[type="submit"].btn:hover,
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+.fancybox-content{
+	padding: 40px;
+}
+
+.fancybox-close-small svg path{
+	fill: $color-orange;
+}

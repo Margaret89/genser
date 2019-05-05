@@ -1,0 +1,61 @@
+﻿/*----------- form-site -------------*/
+.form-site-popup{
+	max-width: 360px;
+
+	input[type="submit"].btn{
+		font-weight: 600;
+	}
+}
+
+.form-site{
+	&__head{
+		@include font(normal, 500, 19px, 1.15, $color-text);
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		@include font(normal, normal, 15px, 1.45, $color-grey);
+		text-align: center;
+	}
+
+	&__fields{
+		margin-top: 25px;
+	}
+
+	input[type="text"],
+	input[type="mail"],
+	textarea{
+		height: 50px;
+		width: 100%;
+		outline: none;
+		border: 1px solid #c4c4c4;
+		border-radius: 25px;
+		@include font(normal, normal, 15px, 1.15, $color-text);
+		padding: 0 25px;
+		margin-bottom: 20px;
+	}
+
+	textarea{
+		height: 150px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="mail"]::placeholder,
+	textarea::placeholder{
+		color: $color-grey;
+	}
+
+	.btn{
+		width: 100%;
+	}
+}
+
+.success-alert{
+	max-width: 360px;
+
+	&__text{
+		@include font(normal, normal, 16px, 1.45, $color-text);
+		text-align: center;
+	}
+}

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="css/hamburger.css">
+		<link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
@@ -41,8 +42,8 @@
 										<div class="header-top__time">С 9 до 21, без выходных</div>
 									</div>
 								</div>
-			
-								<a href="#" class="btn btn--border">Перезвонить</a>
+								
+								<a data-fancybox data-src="#feedback-form" href="javascript:;" class="btn btn--border">Перезвонить</a>
 							</div>
 			
 							<nav class="header-bottom">
@@ -118,12 +119,108 @@
 					<a href="#" class="btn btn--border">Кнопка</a>
 
 			</main>
-			<footer class="footer-wrap">
-				<p>Footer</p>
+			<footer>
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<div class="footer-top__logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
+							</div>
+			
+							<div class="col-4">
+								<ul class="footer-menu">
+									<li class="footer-menu__content">
+										<a href="#" class="footer-menu__head">Услуги</a>
+			
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item"><a href="#">Техническое обслуживание</a></li>
+											<li class="footer-menu__item"><a href="#">Слесарный ремонт</a></li>
+											<li class="footer-menu__item"><a href="#">Диагностика</a></li>
+											<li class="footer-menu__item"><a href="#">Шиномонтаж/Балансировка</a></li>
+											<li class="footer-menu__item"><a href="#">Консультация специалиста</a></li>
+											<li class="footer-menu__item"><a href="#">Запчасти</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+			
+							<div class="col-3">
+								<ul class="footer-menu">
+									<li class="footer-menu__content">
+										<a href="#" class="footer-menu__head">О компании</a>
+			
+										<ul class="footer-menu__list">
+											<li class="footer-menu__item"><a href="#">СМИ о нас</a></li>
+											<li class="footer-menu__item"><a href="#">Статьи</a></li>
+											<li class="footer-menu__item"><a href="#">Новости</a></li>
+											<li class="footer-menu__item"><a href="#">Вакансии</a></li>
+											<li class="footer-menu__item"><a href="#">Контакты</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+			
+							<div class="col-2">
+								<div class="footer-contact-wrap">
+									<div class="footer-top__head">Контакты</div>
+			
+									<div class="footer-contact">
+										<div class="footer-contact__item footer-contact__item--map">
+											ул. Добролюбова, 2Б<br>
+											ул. Лобачевского, 114<br>
+											Новоясеневский пр-т, 6
+										</div>
+			
+										<div class="footer-contact__item footer-contact__item--phone"><a href="tel:+74957857722">8 495 785 77 22</a></div>
+			
+										<div class="footer-contact__item footer-contact__item--mail"><a href="mailto:info@genser.ru">info@genser.ru</a></div>
+									</div>
+			
+									<a data-fancybox data-src="#feedback-form" href="javascript:;" class="btn">Связаться с нами</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-6">
+								<div class="footer-bottom__copyright">© Genser 2019. Все права защищены</div>
+							</div>
+			
+							<div class="col-6">
+								<a href="#" class="footer-bottom__polit">Подитика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</footer>
+			
+			<div style="display: none;" id="feedback-form" class="form-site-popup">
+				<form method="get" class="form-site js-valid-form">
+					<div class="form-site__head">Оставьте заявку</div>
+					<div class="form-site__text">И мы свяжемся с Вами в ближайшее время</div>
+			
+					<div class="form-site__fields">
+						<input type="text" placeholder="ФИО" required="required">
+						<input type="text" placeholder="Телефон" class="js-phone" required="required">
+					</div>
+			
+					<input type="submit" value="Оставить заявку" class="btn">
+				</form>
+			</div>
+			
+			<!-- Попап об успешной отправки письма -->
+			<div style="display: none;" id="msg-success" class="success-alert">
+				<div class="success-alert__text">Ваше сообщение успешно отправлено!</div>
+			</div>
 		</div>
 
 		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+		<script src="js/vendor/inputmask/jquery.maskedinput.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
