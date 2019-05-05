@@ -1,0 +1,118 @@
+﻿html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, normal, 15px, 1.75, $color-text);
+	box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	color: $color-orange;
+}
+
+a:hover,
+a:active,
+a:focus{
+	text-decoration: none;
+}
+
+p{
+	@include font(normal, normal, 15px, 1.75, $color-text);
+	padding: 5px 0;
+}
+
+h1,
+.h1{
+	@include font(normal, bold, 50px, 1.15, $color-white);
+}
+
+h2,
+.h2{
+	@include font(normal, 500, 40px, 1.15, $color-text);
+}
+
+h3,
+.h3{
+	@include font(normal, 500, 32px, 1.15, $color-text);
+}
+
+h4,
+.h4{
+	@include font(normal, 500, 19px, 1.15, $color-text);
+}
+
+h5,
+.h5{
+	@include font(normal, normal, 19px, 1.15, $color-text);
+}
+
+h6,
+.h6{
+	@include font(normal, normal, 16px, 1.15, $color-text);
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.btn,
+input[type="submit"].btn{
+	display: inline-block;
+	height: 50px;
+	background: $color-orange;
+	border: 1px solid $color-orange;
+	border-radius: 25px;
+	outline: none;
+	@include font(normal, 500, 15px, 48px, $color-white);
+	padding: 0 25px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	min-width: 180px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"].btn:hover,
+.btn:hover{
+	background: $color-dark-orange;
+}
+
+.btn--border{
+	background: $color-white;
+	color: $color-orange;
+	box-shadow: none;
+}
+
+.btn--border:hover{
+	background: $color-orange;
+	color: $color-white;
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.h-text-left{text-align: left !important;}
+.h-text-center{text-align: center !important;}
+.h-text-right{text-align: right !important;}
+.h-text-justify{text-align: justify !important;}
+.h-text-uppercase{text-transform: uppercase !important;}
+.h-text-bold {font-weight: 700 !important;}

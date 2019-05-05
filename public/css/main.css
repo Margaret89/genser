@@ -1,0 +1,438 @@
+/*-------------- fonts -----------------*/
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-BoldItalic.eot");
+  src: local("Gotham Pro Bold Italic"), local("GothamPro-BoldItalic"), url("../fonts/GothamPro/GothamPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-BoldItalic.woff") format("woff"), url("../fonts/GothamPro/GothamPro-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-Italic.eot");
+  src: local("Gotham Pro Italic"), local("GothamPro-Italic"), url("../fonts/GothamPro/GothamPro-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-Italic.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-Medium.eot");
+  src: local("Gotham Pro Medium"), local("GothamPro-Medium"), url("../fonts/GothamPro/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-Medium.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-BlackItalic.eot");
+  src: local("Gotham Pro Black Italic"), local("GothamPro-BlackItalic"), url("../fonts/GothamPro/GothamPro-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-BlackItalic.woff") format("woff"), url("../fonts/GothamPro/GothamPro-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-Bold.eot");
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"), url("../fonts/GothamPro/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro Narrow';
+  src: url("../fonts/GothamPro/GothamProNarrow-Bold.eot");
+  src: local("Gotham Pro Narrow Bold"), local("GothamProNarrow-Bold"), url("../fonts/GothamPro/GothamProNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamProNarrow-Bold.woff") format("woff"), url("../fonts/GothamPro/GothamProNarrow-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro Narrow';
+  src: url("../fonts/GothamPro/GothamProNarrow-Medium.eot");
+  src: local("Gotham Pro Narrow Medium"), local("GothamProNarrow-Medium"), url("../fonts/GothamPro/GothamProNarrow-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamProNarrow-Medium.woff") format("woff"), url("../fonts/GothamPro/GothamProNarrow-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-LightItalic.eot");
+  src: local("Gotham Pro Light Italic"), local("GothamPro-LightItalic"), url("../fonts/GothamPro/GothamPro-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-LightItalic.woff") format("woff"), url("../fonts/GothamPro/GothamPro-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-Light.eot");
+  src: local("Gotham Pro Light"), local("GothamPro-Light"), url("../fonts/GothamPro/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-Light.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-Black.eot");
+  src: local("Gotham Pro Black"), local("GothamPro-Black"), url("../fonts/GothamPro/GothamPro-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-Black.woff") format("woff"), url("../fonts/GothamPro/GothamPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"), url("../fonts/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro.woff") format("woff"), url("../fonts/GothamPro/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro-MediumItalic.eot");
+  src: local("Gotham Pro Medium Italic"), local("GothamPro-MediumItalic"), url("../fonts/GothamPro/GothamPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro/GothamPro-MediumItalic.woff") format("woff"), url("../fonts/GothamPro/GothamPro-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/*-------------- base style -----------------*/
+html,
+body {
+  background: #fff;
+  font-family: "Gotham Pro", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #eb6441;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #000;
+  padding: 5px 0;
+}
+
+h1,
+.h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1.15;
+  color: #fff;
+}
+
+h2,
+.h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #000;
+}
+
+h3,
+.h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  color: #000;
+}
+
+h4,
+.h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #000;
+}
+
+h5,
+.h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #000;
+}
+
+h6,
+.h6 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.15;
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.btn,
+input[type="submit"].btn {
+  display: inline-block;
+  height: 50px;
+  background: #eb6441;
+  border: 1px solid #eb6441;
+  border-radius: 25px;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 48px;
+  color: #fff;
+  padding: 0 25px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 180px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"].btn:hover,
+.btn:hover {
+  background: #ea542d;
+}
+
+.btn--border {
+  background: #fff;
+  color: #eb6441;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn--border:hover {
+  background: #eb6441;
+  color: #fff;
+}
+
+.code {
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e8;
+  color: #d14;
+  padding: 1px 4px;
+  display: inline-block;
+  font-family: monospace, arial;
+  border-radius: 3px;
+}
+
+.h-text-left {
+  text-align: left !important;
+}
+
+.h-text-center {
+  text-align: center !important;
+}
+
+.h-text-right {
+  text-align: right !important;
+}
+
+.h-text-justify {
+  text-align: justify !important;
+}
+
+.h-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.h-text-bold {
+  font-weight: 700 !important;
+}
+
+/*-------------- Header -----------------*/
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.header-top__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top__address {
+  margin-right: 50px;
+}
+
+.header-top__phone, .header-top__street {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.15;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.header-top__phone a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header-top__time, .header-top__subway {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.15;
+  color: #000;
+}
+
+.header-top__subway {
+  position: relative;
+}
+
+.header-top__subway::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  background: url(../img/sprite.png) no-repeat -5px -5px;
+  margin-right: 10px;
+}
+
+.header-top__subway--yellow::before {
+  background-position: -30px -5px;
+}
+
+.header-top__subway--orange::before {
+  background-position: -55px -5px;
+}
+
+.header-top .btn {
+  height: 45px;
+  line-height: 43px;
+}
+
+.header-bottom {
+  padding: 20px 0;
+}
+
+.top-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-menu ul,
+.top-menu li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-menu__item {
+  position: relative;
+}
+
+.top-menu__item,
+.top-menu__item > a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.15;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.top-menu__item .ic-hamburger {
+  margin-right: 12px;
+}
+
+.top-menu__item:hover > a {
+  color: #eb6441;
+}
+
+.top-menu__item:hover > .ic-hamburger span,
+.top-menu__item:hover > .ic-hamburger span::before,
+.top-menu__item:hover > .ic-hamburger span::after {
+  background-color: #eb6441;
+}
+
+.top-menu__sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.top-menu__item:hover .top-menu__sub {
+  display: block;
+}
+
+.top-menu__sub-item,
+.top-menu__sub-item a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.15;
+  color: #000;
+  text-decoration: none;
+}
+
+.top-menu__sub-item a:hover {
+  color: #eb6441;
+}
+
+.top-menu .top-menu__sub {
+  padding: 10px 0;
+}
+
+.top-menu .top-menu__sub-item {
+  padding: 10px 15px;
+}
+
+/*-------------- Footer -----------------*/

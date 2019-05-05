@@ -1,0 +1,135 @@
+/*-------------- Header -----------------*/
+.header-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #e4e4e4;
+	padding-top: 25px;
+	padding-bottom: 20px;
+
+	&__info{
+		display: flex;
+	}
+
+	&__address{
+		margin-right: 50px;
+	}
+
+	&__phone,
+	&__street{
+		@include font(normal, 500, 15px, 1.15, $color-text);
+		margin-bottom: 8px;
+	}
+
+	&__phone a{
+		color: $color-text;
+		text-decoration: none;
+	}
+
+	&__time,
+	&__subway{
+		@include font(normal, normal, 13px, 1.15, $color-text);
+	}
+
+	&__subway{
+		position: relative;
+	}
+
+	&__subway::before{
+		content: '';
+		display: inline-block;
+		width: 18px;
+		height: 12px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -5px;
+		margin-right: 10px;
+	}
+
+	&__subway--yellow::before{
+		background-position: -30px -5px;
+	}
+
+	&__subway--orange::before{
+		background-position: -55px -5px;
+	}
+
+	.btn{
+		height: 45px;
+		line-height: 43px;
+	}
+}
+
+.header-bottom{
+	padding: 20px 0;
+}
+
+.top-menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	ul,
+	li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item{
+		position: relative;
+	}
+
+	&__item,
+	&__item > a{
+		@include font(normal, normal, 15px, 1.15, $color-text);
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__item .ic-hamburger{
+		margin-right: 12px;
+	}
+
+	&__item:hover > a{
+		color: $color-orange;
+	}
+
+	&__item:hover > .ic-hamburger span,
+	&__item:hover > .ic-hamburger span::before,
+	&__item:hover > .ic-hamburger span::after{
+		background-color: $color-orange;
+	}
+
+	&__sub{
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		background-color: $color-white;
+		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+	}
+
+	&__item:hover &__sub{
+		display: block;
+	}
+
+	&__sub-item,
+	&__sub-item a{
+		@include font(normal, normal, 15px, 1.15, $color-text);
+		text-decoration: none;
+	}
+
+	&__sub-item a:hover{
+		color: $color-orange;
+	}
+
+	.top-menu &__sub{
+		padding: 10px 0;
+	}
+
+	.top-menu &__sub-item{
+		padding: 10px 15px;
+	}
+}
