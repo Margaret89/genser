@@ -1,0 +1,35 @@
+﻿/*----------- tabs -------------*/
+.tabs{
+	display: flex;
+
+	&__item{
+		height: 50px;
+		padding: 0 30px;
+		@include font(normal, 500, 15px, 48px, $color-text);
+		text-decoration: none;
+		background: $color-white;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+
+	&__item:first-child{
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+
+	&__item:last-child{
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
+
+	&__item:not(:last-child){
+		border-right: 1px solid $color-grey;
+	}
+
+	&__item.active,
+	&__item:hover{
+		background: $color-orange;
+		color: $color-white;
+		border-color: $color-orange;
+	}
+}

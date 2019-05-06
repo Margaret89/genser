@@ -80,8 +80,81 @@ $(document).ready(function () {
 		}
 	}
 
+	// Слайдер партнеров
+
+	if ($('.js-partner').length) {
+		$('.js-partner').slick({
+			dots: false,
+			infinite: true,
+			slidesToShow: 7,
+			slidesToScroll: 1,
+		});
+	}
+
+	// Yandex карта
+	if ($('#map').length) {
+		// Иницилизация карты
+		ymaps.ready(init);
+
+		function init(){
+			var myMap;
+
+			myMap = new ymaps.Map("map", {
+				center: [55.81, 37.60],
+				zoom: 15,
+				controls: []
+			});
+
+			var myPlacemark = new ymaps.Placemark([55.806013, 37.597379] , {},
+				{ iconLayout: 'default#image',
+				iconImageHref: 'img/mark-map.png',
+				iconImageSize: [58, 82],
+				iconImageOffset: [-29, -82] });
+
+				myMap.geoObjects.add(myPlacemark);
+
+			var myPlacemark2 = new ymaps.Placemark([55.690977, 37.478225] , {},
+				{ iconLayout: 'default#image',
+				iconImageHref: 'img/mark-map.png',
+				iconImageSize: [58, 82],
+				iconImageOffset: [-29, -82] });
+
+				myMap.geoObjects.add(myPlacemark2);
+
+			var myPlacemark3 = new ymaps.Placemark([55.613169, 37.514170] , {},
+				{ iconLayout: 'default#image',
+				iconImageHref: 'img/mark-map.png',
+				iconImageSize: [58, 82],
+				iconImageOffset: [-29, -82] });
+
+				myMap.geoObjects.add(myPlacemark3);
+
+			// Изменение центра карты при клике по табам
+			$('.js-tabs-item').click(function(){
+				var curCenterMapX = $(this).data('coordx');
+				var curCenterMapY = $(this).data('coordy');
+
+				$('.js-tabs-item').removeClass('active');
+				$(this).addClass('active');
+
+				myMap.panTo([curCenterMapX, curCenterMapY]);
+			});
+		}
+
+		
+	}
+
+
 	
 
+	
+// ул. Добролюбова, 2Б
+// 55.806692, 37.596171
+// ул. Лобачевского, 114, Москва
+// 55.690977, 37.478225
+
+// Новоясеневский пр-т, 6
+// 55.613169, 37.514170
 	// Вызов функции подгрузки изображений
 	// loadBigImg();
 	// loadBigBacground();
