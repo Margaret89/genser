@@ -60,3 +60,18 @@
 		@include font(normal, 500, 15px, 1, $color-light-orange);
 	}
 }
+
+.services-page{
+	.partner-wrap{
+		margin-top: 28px;
+		margin-bottom: 95px;
+	}
+
+	.map-wrap{
+		margin-top: 5px;
+	}
+
+	.repair-form-wrap{
+		margin-top: 5px;
+	}
+}

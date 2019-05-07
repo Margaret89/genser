@@ -32,5 +32,21 @@
 	.form-site--hor input[type="mail"],
 	.form-site--hor textarea{
 		width: 100%;
+		background: transparent;
+		color: $color-white;
+	}
+
+	.form-site--hor input[type="text"]:focus,
+	.form-site--hor input[type="mail"]:focus,
+	.form-site--hor textarea:focus{
+		background: $color-white;
+		color: $color-text;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="mail"]::placeholder,
+	textarea::placeholder{
+		color: $color-white;
+		opacity: 1;
 	}
 }

@@ -130,6 +130,27 @@ a:focus {
   text-decoration: none;
 }
 
+.link-more {
+  font-weight: 500;
+  text-decoration: none;
+  padding-right: 45px;
+  position: relative;
+}
+
+.link-more::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 14px;
+  background: url(../img/sprite.png) no-repeat -50px -85px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+
 p {
   font-style: normal;
   font-weight: normal;
@@ -965,6 +986,19 @@ input[type="submit"].btn:hover,
   color: #eb5b36;
 }
 
+.services-page .partner-wrap {
+  margin-top: 28px;
+  margin-bottom: 95px;
+}
+
+.services-page .map-wrap {
+  margin-top: 5px;
+}
+
+.services-page .repair-form-wrap {
+  margin-top: 5px;
+}
+
 /*----------- about -------------*/
 .about-wrap {
   margin-top: 45px;
@@ -1206,10 +1240,14 @@ input[type="submit"].btn:hover,
   border-right: 1px solid #a4a4a4;
 }
 
-.tabs__item.active, .tabs__item:hover {
+.tabs__item.active {
   background: #eb6441;
   color: #fff;
   border-color: #eb6441;
+}
+
+.tabs__item:hover {
+  color: #eb6441;
 }
 
 /*----------- repair-form -------------*/
@@ -1248,4 +1286,134 @@ input[type="submit"].btn:hover,
 .repair-form-wrap .form-site--hor input[type="mail"],
 .repair-form-wrap .form-site--hor textarea {
   width: 100%;
+  background: transparent;
+  color: #fff;
+}
+
+.repair-form-wrap .form-site--hor input[type="text"]:focus,
+.repair-form-wrap .form-site--hor input[type="mail"]:focus,
+.repair-form-wrap .form-site--hor textarea:focus {
+  background: #fff;
+  color: #000;
+}
+
+.repair-form-wrap input[type="text"]::-webkit-input-placeholder,
+.repair-form-wrap input[type="mail"]::-webkit-input-placeholder,
+.repair-form-wrap textarea::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.repair-form-wrap input[type="text"]::-moz-placeholder,
+.repair-form-wrap input[type="mail"]::-moz-placeholder,
+.repair-form-wrap textarea::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.repair-form-wrap input[type="text"]:-ms-input-placeholder,
+.repair-form-wrap input[type="mail"]:-ms-input-placeholder,
+.repair-form-wrap textarea:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.repair-form-wrap input[type="text"]::-ms-input-placeholder,
+.repair-form-wrap input[type="mail"]::-ms-input-placeholder,
+.repair-form-wrap textarea::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.repair-form-wrap input[type="text"]::placeholder,
+.repair-form-wrap input[type="mail"]::placeholder,
+.repair-form-wrap textarea::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+/*----------- special-offer -------------*/
+.special-offer-wrap {
+  margin-top: -15px;
+}
+
+.special-offer-wrap h1,
+.special-offer-wrap .h1 {
+  margin-bottom: 60px;
+}
+
+.special-offer__item {
+  display: block;
+  width: 100%;
+  height: 405px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.special-offer__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.45;
+  color: #fff;
+  padding: 32px 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+/*----------- popular-services -------------*/
+.popular-services-wrap {
+  margin-top: 75px;
+}
+
+.popular-services-wrap h1,
+.popular-services-wrap .h1 {
+  margin-bottom: 73px;
+}
+
+.popular-services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.popular-services__img {
+  margin-right: 20px;
+}
+
+.popular-services__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.15;
+  color: #000;
+  width: calc(100% - 90px);
+}
+
+/*----------- service-seo-text -------------*/
+.service-seo-text {
+  margin-top: 82px;
+}
+
+.service-seo-text__head {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #000;
 }

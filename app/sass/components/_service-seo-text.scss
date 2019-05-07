@@ -1,0 +1,8 @@
+﻿/*----------- service-seo-text -------------*/
+.service-seo-text{
+	margin-top: 82px;
+	
+	&__head{
+		@include font(normal, 500, 40px, 1.15, $color-text);
+	}
+}

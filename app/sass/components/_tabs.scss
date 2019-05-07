@@ -26,10 +26,13 @@
 		border-right: 1px solid $color-grey;
 	}
 
-	&__item.active,
-	&__item:hover{
+	&__item.active{
 		background: $color-orange;
 		color: $color-white;
 		border-color: $color-orange;
+	}
+
+	&__item:hover{
+		color: $color-orange;
 	}
 }

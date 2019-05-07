@@ -26,6 +26,24 @@ a:focus{
 	text-decoration: none;
 }
 
+.link-more{
+	font-weight: 500;
+	text-decoration: none;
+	padding-right: 45px;
+	position: relative;
+}
+
+.link-more::after{
+	content: '';
+	display: block;
+	width: 30px;
+	height: 14px;
+	background: url(#{$path-img}/sprite.png) no-repeat -50px  -85px;
+	position: absolute;
+	@include top-center;
+	right: 0;
+}
+
 p{
 	@include font(normal, normal, 15px, 1.75, $color-text);
 	padding: 5px 0;

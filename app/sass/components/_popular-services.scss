@@ -1,0 +1,26 @@
+﻿/*----------- popular-services -------------*/
+.popular-services-wrap{
+	margin-top: 75px;
+
+	h1,
+	.h1{
+		margin-bottom: 73px;
+	}
+}
+
+.popular-services{
+	&__item{
+		display: flex;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+
+	&__img{
+		margin-right: 20px;
+	}
+
+	&__text{
+		@include font(normal, 500, 17px, 1.15, $color-text);
+		width: calc(100% - 90px);
+	}
+}
