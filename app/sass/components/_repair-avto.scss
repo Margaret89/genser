@@ -1,0 +1,72 @@
+﻿/*----------- repair-avto -------------*/
+.repair-avto{
+	margin-top: 50px;
+
+	&__img{
+		text-align: center;
+	}
+
+	&__text{
+		@include font(normal, normal, 17px, 1.75, $color-text);
+	}
+
+	.btn{
+		margin-top: 30px;
+	}
+}
+
+.repair-avto-service{
+	&__list,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		width: 100%;
+		height: 265px;
+		// overflow-x: hidden;
+		overflow-y: scroll;
+	}
+
+	&__item{
+		padding: 10px 0;
+	}
+
+	&__item,
+	&__item a{
+		@include font(normal, 500, 17px, 1.15, $color-text);
+		text-decoration: none;
+	}
+
+	&__item a:hover{
+		color: $color-orange;
+	}
+
+	&__more{
+		@include font(normal, normal, 17px, 1.15, $color-grey);
+		text-decoration: none;
+		border-bottom: 1px dotted $color-grey;
+		margin-top: 20px;
+	}
+
+	&__more:hover{
+		border-bottom: 0;
+		color: $color-orange;
+	}
+}
+
+.repair-avto-service__list::-webkit-scrollbar {
+	width: 1px;
+	background-color: #e4e4e4;
+}
+
+.repair-avto-service__list::-webkit-scrollbar-thumb {
+	background-color: $color-orange
+}
+
+// .repair-avto-service__list::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//     background-color: red;
+// }
