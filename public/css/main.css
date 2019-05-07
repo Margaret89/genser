@@ -1211,3 +1211,41 @@ input[type="submit"].btn:hover,
   color: #fff;
   border-color: #eb6441;
 }
+
+/*----------- repair-form -------------*/
+.repair-form-wrap {
+  padding: 158px 0 100px;
+  margin-top: 85px;
+  background: url(../img/bg-repear-form.jpg) no-repeat center;
+  -webkit-clip-path: url(#clipping);
+  clip-path: url(#clipping);
+}
+
+.repair-form-wrap .h1-white {
+  font-size: 40px;
+  text-align: center;
+  max-width: 945px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.repair-form-wrap .form-site--hor {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.repair-form-wrap .form-site__fields {
+  width: calc(100% - 300px);
+}
+
+.repair-form-wrap .btn {
+  width: 300px;
+}
+
+.repair-form-wrap .form-site--hor input[type="text"],
+.repair-form-wrap .form-site--hor input[type="mail"],
+.repair-form-wrap .form-site--hor textarea {
+  width: 100%;
+}
