@@ -81,7 +81,6 @@ $(document).ready(function () {
 	}
 
 	// Слайдер партнеров
-
 	if ($('.js-partner').length) {
 		$('.js-partner').slick({
 			dots: false,
@@ -161,7 +160,17 @@ $(document).ready(function () {
 	});
 
 
-	
+	// Слайдер о компании
+	if ($('.js-about-slider').length) {
+		$('.js-about-slider').slick({
+			dots: true,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			vertical: true,
+		});
+	}
+
 
 // ул. Добролюбова, 2Б
 // 55.806692, 37.596171
