@@ -140,14 +140,29 @@ $(document).ready(function () {
 				myMap.panTo([curCenterMapX, curCenterMapY]);
 			});
 		}
-
-		
 	}
 
+	// Стилизация скроллбара
+	$(".js-scroll-content").each(function(indx){
+		var widthContent = $(this).data('width');
+		var heightContent = $(this).data('height');
+
+		$(this).slimScroll({
+			width: widthContent,
+			height: heightContent,
+			size: '1px',
+			color: '#eb6441',
+			alwaysVisible: true,
+			railVisible: true,
+			railColor: '#e4e4e4',
+			railOpacity: 1,
+			wheelStep: 5,
+		});
+	});
+
 
 	
 
-	
 // ул. Добролюбова, 2Б
 // 55.806692, 37.596171
 // ул. Лобачевского, 114, Москва

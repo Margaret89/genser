@@ -87,6 +87,15 @@ h6,
 	@include font(normal, normal, 15px, 1.15, $color-text);
 }
 
+hr{
+	color: #e4e4e4;
+	background-color: #e4e4e4;
+	border: 0px none;
+	outline: 0;
+	height: 1px;
+	margin: 0;
+}
+
 .wrapper{
 	display: flex;
 	flex-direction: column;
@@ -169,4 +178,12 @@ input[type="submit"].btn:hover,
 
 .fancybox-close-small svg path{
 	fill: $color-orange;
+}
+
+.slimScrollBar{
+	opacity: 1!important;
+}
+
+.scroll-content{
+	overflow: hidden;
 }
