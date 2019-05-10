@@ -132,9 +132,13 @@ $(document).ready(function () {
 			$('.js-tabs-item').click(function(){
 				var curCenterMapX = $(this).data('coordx');
 				var curCenterMapY = $(this).data('coordy');
+				var curTab = $(this).data('tab');
 
 				$('.js-tabs-item').removeClass('active');
 				$(this).addClass('active');
+
+				$('.js-map-info-list').removeClass('active');
+				$('.js-map-info-list[data-tab='+ curTab +']').addClass('active');
 
 				myMap.panTo([curCenterMapX, curCenterMapY]);
 			});

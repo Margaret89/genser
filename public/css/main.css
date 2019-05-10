@@ -1288,6 +1288,11 @@ input[type="submit"].btn:hover,
   margin-top: 85px;
 }
 
+.map-wrap--tab {
+  margin-top: 18px;
+  margin-bottom: 98px;
+}
+
 .map-wrap h1,
 .map-wrap .h1 {
   margin-bottom: 70px;
@@ -1313,6 +1318,77 @@ input[type="submit"].btn:hover,
 .map .ymaps-2-1-73-ground-pane {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.map-tabs {
+  position: relative;
+}
+
+.map-tabs .tabs {
+  position: absolute;
+  top: -115px;
+  right: 15px;
+}
+
+.map-info {
+  margin-bottom: 80px;
+}
+
+.map-info__list {
+  display: none;
+}
+
+.map-info__list.active {
+  display: block;
+}
+
+.map-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.map-info__img {
+  margin-right: 25px;
+}
+
+.map-info__content {
+  width: calc(100% - 95px);
+}
+
+.map-info__head {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #000;
+}
+
+.map-info__text,
+.map-info__text a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.15;
+  color: #a4a4a4;
+  text-decoration: none;
+}
+
+.map-info__text {
+  margin-top: 5px;
+}
+
+.map-info__text a:hover {
+  color: #eb6441;
+}
+
+.map-info .btn {
+  display: table;
+  margin-left: auto;
+  min-width: 240px;
 }
 
 /*----------- tabs -------------*/
