@@ -1,17 +1,118 @@
 ﻿/*----------- about-slider -------------*/
 .about-slider-wrap{
-	margin-left: 60px;
-	margin-top: 60px;
+	max-width: 350px;
+	max-height: 480px;
 	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
+	margin-left: 60px;
+	margin-top: 78px;
+	position: relative;
 }
 
 .about-slider{
-	padding-right: 60px;
-	margin-left: -60px;
-	margin-top: -60px;
+	top: -60px;
+	left: -60px;
+	height: calc(100% + 60px);
+	height: 540px;
+	overflow: hidden;
+
+	&.slick-initialized{
+		height: auto;
+		overflow: visible;
+	}
 
 	&__label{
+		display: flex;
+		height: 60px;
+		width: 100%;
+		align-items: center;
 		@include font(italic, normal, 15px, 1.15, $color-text);
-		padding: 20px 30px;
+		padding: 20px 30px 20px 90px;
+		overflow: hidden;
+	}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 14px;
+		height: 30px;
+		outline: 0;
+		border: 0;
+		font-size: 0;
+		padding: 0;
+		margin: 0;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		background-color: transparent;
+		position: absolute;
+		right: -36px;
+		cursor: pointer;
+	}
+
+	.slick-prev{
+		top: 90px;
+		background-position: -40px  -140px
+	}
+
+	.slick-next{
+		top: 140px;
+		background-position: -40px  -185px
+	}
+
+	.slick-prev:hover{
+		background-position: -5px  -140px
+	}
+
+	.slick-next:hover{
+		background-position: -5px  -185px
+	}
+
+	.slick-dots,
+	.slick-dots li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.slick-dots li::before{
+		display: none;
+	}
+
+	.slick-dots{
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: -30px;
+		bottom: 60px;
+	}
+
+	.slick-dots button{
+		display: block;
+		padding: 0;
+		margin: 0;
+		outline: 0;
+		border: 0;
+		font-size: 0;
+		width: 2px;
+		height: 30px;
+		background: $color-grey;
+		cursor: pointer;
+	}
+
+	.slick-dots button:hover,
+	.slick-dots .slick-active button{
+		background: #000;
+		height: 40px;
+	}
+
+	.slick-dots li:not(:last-child) button{
+		margin-bottom: 20px;
+	}
+
+	&.slick-vertical .slick-slide{
+		border: 0;
+		outline: 0;
+	}
+
+	.slick-slide img{
+		height: 480px;
 	}
 }

@@ -1,0 +1,81 @@
+﻿/*----------- news-detail -------------*/
+.header-news{
+	height: 520px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: $color-white;
+	margin-top: 17px;
+	margin-bottom: 15px;
+
+	&__content{
+		padding: 55px 80px;
+	}
+
+	&__time-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 120px;
+	}
+
+	&__date,
+	&__time{
+		@include font(normal, 500, 15px, 1.15, $color-white);
+		padding-left: 25px;
+		position: relative;
+	}
+
+	&__time{
+		margin-left: 65px;
+	}
+
+	&__date::before,
+	&__time::before{
+		content: '';
+		display: block;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		left: 0;
+		@include top-center;
+	}
+
+	&__date::before{
+		background: url(#{$path-img}/ic-calendar-white.svg) no-repeat center;
+	}
+
+	&__time::before{
+		background: url(#{$path-img}/ic-time.svg) no-repeat center;
+	}
+
+	&__head{
+		@include font(normal, bold, 40px, 1.15, $color-white);
+		padding: 0;
+		margin: 0;
+		max-width: 440px;
+	}
+}
+
+.detail-news{
+	&__content{
+		padding: 0 80px;
+	}
+
+	&__more{
+		margin-bottom: 68px;
+	}
+
+	&__more h2,
+	&__more .h2{
+		padding: 47px 80px 0;
+		border-top: 1px solid #e4e4e4;
+		margin-top: 15px;
+		margin-bottom: 35px;
+	}
+}
+
+.news-img-full{
+	margin-left: -80px;
+	margin-right: -80px;
+	max-width: calc(100% + 160px);
+}

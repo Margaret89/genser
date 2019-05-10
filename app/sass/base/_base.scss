@@ -47,6 +47,7 @@ a:focus{
 p{
 	@include font(normal, normal, 15px, 1.75, $color-text);
 	padding: 5px 0;
+	margin-bottom: 11px;
 }
 
 h1,
@@ -62,7 +63,7 @@ h1,
 
 h2,
 .h2{
-	@include font(normal, 500, 32px, 1.15, $color-text);
+	@include font(normal, bold, 32px, 1.15, $color-text);
 	margin-bottom: 40px;
 }
 
@@ -87,6 +88,55 @@ h6,
 	@include font(normal, normal, 15px, 1.15, $color-text);
 }
 
+ul,
+ul li{
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+ul,
+ol{
+	padding: 0;
+	padding-left: 20px;
+}
+
+ul li,
+ol li{
+	margin-bottom: 21px;
+}
+
+ul li::before{
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: $color-orange;
+	position: absolute;
+	top: 10px;
+	left: -20px;
+}
+
+p + h2,
+p + .h2{
+	margin-top: 35px;
+}
+
+ul + p,
+ol + p{
+	margin-top: -5px;
+}
+
+p + img{
+	margin-top: 35px;
+}
+
+img + h2,
+img + .h2{
+	margin-top: 50px;
+}
+
 hr{
 	color: #e4e4e4;
 	background-color: #e4e4e4;
@@ -107,6 +157,11 @@ hr{
 
 main{
 	flex: 1;
+	padding-bottom: 100px;
+}
+
+.no-indent{
+	margin-bottom: -100px;
 }
 
 .btn,

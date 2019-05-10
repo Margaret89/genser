@@ -1,0 +1,63 @@
+﻿/*----------- share -------------*/
+.share{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 45px 0;
+
+	&__label{
+		@include font(normal, 500, 17px, 1.15, $color-text);
+		margin-right: 15px;
+	}
+
+	&__item{
+		display: block;
+		width: 80px;
+		height: 40px;
+		border-radius: 20px;
+		background-color: #5181B8;
+		position: relative;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 15px;
+	}
+
+	&__item--vk{background-color: #5181b8;}
+	&__item--vk{background-color: #31619e;}
+	&__item--vk{background-color: #3fa6da;}
+	&__item--vk:hover{background-color: #4670a0;}
+	&__item--vk:hover{background-color: #2a5489;}
+	&__item--vk:hover{background-color: #3893c1;}
+
+	&__item::after{
+		content: '';
+		display: block;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__item--vk::after{
+		background-image: url(#{$path-img}/ic-vk.svg);
+	}
+
+	&__item--fb::after{
+		background-image: url(#{$path-img}/ic-fb.svg);
+	}
+
+	&__item--tw::after{
+		background-image: url(#{$path-img}/ic-tw.svg);
+	}
+
+	&__item--vk::after,
+	&__item--fb::after,
+	&__item--tw::after{
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

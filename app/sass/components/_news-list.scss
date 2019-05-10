@@ -1,0 +1,70 @@
+﻿/*----------- news-list -------------*/
+.news-list{
+	margin-top: 18px;
+	margin-bottom: 50px;
+
+	&__item{
+		border: 3px solid #f4f4f4;
+		padding: 56px 40px 50px;
+		min-height: 200px;
+		margin-bottom: 30px;
+		position: relative;
+	}
+
+	&__date{
+		display: block;
+		@include font(normal, normal, 15px, 1.15, $color-grey);
+		margin-bottom: 10px;
+		padding-left: 25px;
+		position: relative;
+	}
+
+	&__date::before{
+		content: '';
+		display: block;
+		width: 15px;
+		height: 15px;
+		background: url(#{$path-img}/ic-calendar.svg) no-repeat center;
+		position: absolute;
+		left: 0;
+		@include top-center;
+	}
+
+	&__head{
+		display: inline-block;
+		@include font(normal, 500, 21px, 1.45, $color-text);
+		text-decoration: none;
+	}
+
+	&__item--big{
+		border: 0;
+		height: 430px;
+		color: $color-white;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	
+	&__item--big &__date,
+	&__item--big &__head{
+		color: $color-white;
+	}
+
+	&__item--big &__content{
+		padding: 35px 40px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	&__item--big &__date::before{
+		background-image: url(#{$path-img}/ic-calendar-white.svg);
+	}
+
+	&__head:hover{
+		color: $color-orange;
+	}
+}

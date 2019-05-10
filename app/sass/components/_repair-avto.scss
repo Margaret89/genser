@@ -23,6 +23,10 @@
 		list-style: none;
 	}
 
+	li::before{
+		display: none;
+	}
+
 	&__list{
 		width: 100%;
 		height: 265px;

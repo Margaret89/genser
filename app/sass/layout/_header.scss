@@ -80,6 +80,10 @@
 		list-style: none;
 	}
 
+	li::before{
+		display: none;
+	}
+
 	&__item{
 		position: relative;
 	}
