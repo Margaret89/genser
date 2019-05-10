@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+	//= ../header/header-meta.html
+		<title>Запись</title>
+	//= ../header/header-link.html
+	</head>
+	<body>
+		<div class="wrapper">
+			//= ../header/header.html
+			<main>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="bredcrumb">
+								<a href="/" class="bredcrumb__item"><img src="img/ic-home.svg" alt=""></a>
+								<span class="bredcrumb__item">Запись</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="record-form js-record-step active" data-step="1">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="h1">Первый шаг</div>
+
+								<div class="record-step">
+									<div class="record-step__item current">
+										<div class="record-step__img"><img src="img/ic-model.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-model-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор модели</div>
+									</div>
+
+									<div class="record-step__item">
+										<div class="record-step__img"><img src="img/ic-service.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-service-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор услуги</div>
+									</div>
+
+									<div class="record-step__item">
+										<div class="record-step__img"><img src="img/ic-contact.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-contact-color.svg" alt=""></div>
+										<div class="record-step__text">Контакты данные</div>
+									</div>
+								</div>
+
+								<form method="get" class="form-site form-site--hor js-valid-form js-step" data-step="1">
+									<div class="form-site__fields">
+										<select data-placeholder="Выберите марку" class="js-select" required="required">
+											<option value=""></option>
+											<option value="Audi">Audi</option>
+											<option value="BMW">BMW</option>
+											<option value="Ford">Ford</option>
+										</select>
+
+										<select data-placeholder="Выберите модель" class="js-select" required="required">
+											<option value=""></option>
+											<option value="Техническое обслуживание">125T</option>
+											<option value="Слесарный ремонт">90 C200</option>
+											<option value="Диагностика">Accord</option>
+											<option value="Шиномонтаж/Балансировка">Acty</option>
+											<option value="Консультация специалиста">Airwave</option>
+										</select>
+									</div>
+
+									<input type="submit" value="Следующий шаг" class="btn">
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="record-form js-record-step" data-step="2">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="h1">Второй шаг</div>
+
+								<div class="record-step">
+									<div class="record-step__item active">
+										<div class="record-step__img"><img src="img/ic-model.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-model-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор модели</div>
+									</div>
+
+									<div class="record-step__item current">
+										<div class="record-step__img"><img src="img/ic-service.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-service-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор услуги</div>
+									</div>
+
+									<div class="record-step__item">
+										<div class="record-step__img"><img src="img/ic-contact.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-contact-color.svg" alt=""></div>
+										<div class="record-step__text">Контакты данные</div>
+									</div>
+								</div>
+
+								<form method="get" class="form-site form-site--hor js-valid-form js-step" data-step="2">
+									<div class="form-site__fields">
+										<select data-placeholder="Слесарный ремонт" class="js-select">
+											<option value=""></option>
+											<option value="Audi">Audi</option>
+											<option value="BMW">BMW</option>
+											<option value="Ford">Ford</option>
+										</select>
+
+										<select data-placeholder="Выберите услугу" class="js-select">
+											<option value=""></option>
+											<option value="Техническое обслуживание">Техническое обслуживание</option>
+											<option value="Слесарный ремонт">Слесарный ремонт</option>
+											<option value="Диагностика">Диагностика</option>
+											<option value="Шиномонтаж/Балансировка">Шиномонтаж/Балансировка</option>
+											<option value="Консультация специалиста">Консультация специалиста</option>
+										</select>
+									</div>
+
+									<input type="submit" value="Следующий шаг" class="btn">
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="record-form js-record-step record-form--last" data-step="3">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="h1">Последний шаг</div>
+
+								<div class="record-step">
+									<div class="record-step__item active">
+										<div class="record-step__img"><img src="img/ic-model.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-model-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор модели</div>
+									</div>
+
+									<div class="record-step__item active">
+										<div class="record-step__img"><img src="img/ic-service.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-service-color.svg" alt=""></div>
+										<div class="record-step__text">Выбор услуги</div>
+									</div>
+
+									<div class="record-step__item current">
+										<div class="record-step__img"><img src="img/ic-contact.svg" alt=""></div>
+										<div class="record-step__img-active"><img src="img/ic-contact-color.svg" alt=""></div>
+										<div class="record-step__text">Контакты данные</div>
+									</div>
+								</div>
+
+								<form method="get" class="form-site form-site--hor js-valid-form js-step" data-step="3">
+									<div class="form-site__fields">
+										<input type="text" placeholder="Ваше имя" required="required">
+										<input type="text" placeholder="Ваш телефон" required="required" class="js-phone">
+
+										<select data-placeholder="Выберите автотехцентр" class="js-select">
+											<option value=""></option>
+											<option value="Техническое обслуживание">Автотехцентр 1</option>
+											<option value="Слесарный ремонт">Автотехцентр 2</option>
+											<option value="Диагностика">Автотехцентр 3</option>
+											<option value="Шиномонтаж/Балансировка">Автотехцентр 4</option>
+											<option value="Консультация специалиста">Автотехцентр 5</option>
+										</select>
+									</div>
+
+									<input type="submit" value="Оставить заявку" class="btn">
+								</form>
+
+								<div class="h2">Или напишите нам в соцсети</div>
+
+								<div class="write-us">
+									<div class="write-us__item">
+										<a href="#" class="write-us__link">
+											<img src="img/ic-whatsapp.svg" alt="" class="write-us__icon">
+											<span  class="write-us__label">Whatsapp</span>
+										</a>
+									</div>
+
+									<div class="write-us__item">
+										<a href="#" class="write-us__link">
+											<img src="img/ic-telegram.svg" alt="" class="write-us__icon">
+											<span  class="write-us__label">Telegram</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="record-result js-record-step" data-step="4">
+					<img src="img/ic-paper.svg" alt="" class="record-result__img">
+
+					<div class="h1">Ваша заявка принята</div>
+
+					<div class="record-result__text">В ближайшее время с Вами свяжется специалист. Спасибо, что обратились в наш автоцентр.</div>
+				</section>
+
+			</main>
+			//= ../footer/footer.html
+		</div>
+
+		//= ../footer/footer-script.html
+	</body>
+</html>

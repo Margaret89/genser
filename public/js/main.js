@@ -6,18 +6,21 @@ $(document).ready(function () {
 
 	// Вывод сообщения об успешной отправке в попапе
 	$('.js-valid-form').each(function(){
-		$(this).on('submit',function(e){
-			$.fancybox.close();
-			$.fancybox.open({
-				src  : '#msg-success',
-				type : 'inline',
-				opts : {
-					
-				}
+		if (!$(this).hasClass('js-step')) {
+			$(this).on('submit',function(e){
+				$.fancybox.close();
+				$.fancybox.open({
+					src  : '#msg-success',
+					type : 'inline',
+					opts : {
+						
+					}
+				});
+				$(this)[0].reset();
+				e.preventDefault();
 			});
-			$(this)[0].reset();
-			e.preventDefault();
-		});
+		}
+		
 	});
 
 	// Верхний слайдер
@@ -145,6 +148,14 @@ $(document).ready(function () {
 		}
 	}
 
+	// ул. Добролюбова, 2Б
+	// 55.806692, 37.596171
+	// ул. Лобачевского, 114, Москва
+	// 55.690977, 37.478225
+
+	// Новоясеневский пр-т, 6
+	// 55.613169, 37.514170
+
 	// Стилизация скроллбара
 	$(".js-scroll-content").each(function(indx){
 		var widthContent = $(this).data('width');
@@ -187,35 +198,19 @@ $(document).ready(function () {
 		}
 	});
 
+	// Стилизация выпадающего списка
+	$('.js-select').chosen({
+		disable_search: true,
+	});
 
-// ул. Добролюбова, 2Б
-// 55.806692, 37.596171
-// ул. Лобачевского, 114, Москва
-// 55.690977, 37.478225
 
-// Новоясеневский пр-т, 6
-// 55.613169, 37.514170
-	// Вызов функции подгрузки изображений
-	// loadBigImg();
-	// loadBigBacground();
+	// Переход между шагами на странице "Запись"
+	$(".js-step").submit(function (e) {
+		e.preventDefault();
+		$('.js-record-step').removeClass('active');
+		var numStep = $(this).data('step') + 1;
+		console.log(numStep);
+		$('.js-record-step[data-step='+numStep+']').addClass('active');
+	});
 
 });
-
-// Загрузка больших изображений
-// function loadBigImg() {
-// 	var $imgDefer = $('[data-src]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlImgBig = $(this).attr("data-src");
-// 		$(this).attr("src", urlImgBig);
-// 	});
-// }
-
-// function loadBigBacground() {
-// 	var $imgDefer = $('[data-background]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlBackgroundBig = $(this).attr("data-background");
-// 		$(this).css("background-image", "url("+ urlBackgroundBig +")");
-// 	});
-// }

@@ -1,0 +1,151 @@
+/*-------------- record-form -----------------*/
+.record-form{
+	display: none;
+	text-align: center;
+
+	&.active{
+		display: block;
+	}
+
+	h1,
+	.h1{
+		margin-bottom: 72px;
+	}
+
+	.form-site{
+		box-shadow: none;
+	}
+
+	.form-site--hor{
+		justify-content: center;
+	}
+
+	.form-site .btn,
+	.form-site--hor input[type="text"],
+	.form-site--hor input[type="email"]{
+		width: 280px;
+	}
+
+	.chosen-container{
+		margin-right: 30px;
+	}
+
+	&--last .form-site--hor{
+		display: block;
+	}
+
+	&--last .chosen-container{
+		margin-right: 0;
+	}
+
+	&--last .form-site--hor .form-site__fields{
+		max-width: 900px;
+		margin: 0 auto 60px;
+	}
+
+	h2,
+	.h2{
+		margin-top: 12px;
+		margin-bottom: 37px;
+	}
+}
+
+.record-step{
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 40px;
+
+	&::before{
+		content: '';
+		display: block;
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: url(#{$path-img}/bg-line.png) repeat-x 0 center;
+	}
+
+	&__item{
+		background: $color-white;
+		position: relative;
+	}
+
+	&__img-active,
+	&__item.active &__img,
+	&__item.current &__img{
+		display: none;
+	}
+
+	&__item.active &__img-active,
+	&__item.current &__img-active{
+		display: block;
+	}
+
+	&__text{
+		@include font(normal, 500, 17px, 1.15, $color-grey);
+		margin-top: 20px;
+	}
+
+	&__item.current &__text{
+		color: $color-text;
+	}
+
+	&__item.active &__text{
+		color: $color-orange;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 185px;
+	}
+}
+
+.write-us{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	&__item{
+		padding: 5px 60px;
+	}
+
+	&__link{
+		display: block;
+		text-decoration: none;
+	}
+
+	&__icon{
+		margin-right: 10px;
+	}
+
+	&__label{
+		@include font(normal, 500, 15px, 1.15, $color-text);
+	}
+
+	&__item:not(:last-child){
+		border-right: 1px solid #e4e4e4;
+	}
+}
+
+.record-result{
+	display: none;
+	@include font(normal, normal, 19px, 1.45, $color-text);
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+
+	&.active{
+		display: block;
+	}
+
+	h1,
+	.h1{
+		margin-top: 45px;
+		margin-bottom: 40px;
+	}
+}

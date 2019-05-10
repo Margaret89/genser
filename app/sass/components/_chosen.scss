@@ -1,0 +1,68 @@
+/*-------------- chosen -----------------*/
+.chosen-container{
+	min-width: 280px;
+	text-align: left;
+}
+
+.chosen-search{
+	display: none!important;
+}
+
+.chosen-container-single .chosen-single{
+	display: block;
+	box-shadow: none;
+	outline: 0;
+	background: $color-white;
+	height: 50px;
+	border: 1px solid #c4c4c4;
+	border-radius: 25px;
+	@include font(normal, normal, 15px, 48px, $color-text);
+	padding: 0 25px;
+}
+
+// .chosen-container-single .chosen-single span{
+// 	margin-right: 40px;
+// }
+
+.chosen-container-single .chosen-single.chosen-default{
+	color: $color-grey;
+}
+
+.chosen-container-single .chosen-single div{
+	right: 20px;
+}
+
+.chosen-container-single .chosen-single div b{
+	background: url(#{$path-img}/sprite.png) no-repeat -5px -310px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b{
+	background-position: -5px -280px;
+}
+
+.chosen-container .chosen-results{
+	margin: 0;
+	padding: 0;
+}
+
+.chosen-container .chosen-results li{
+	padding: 5px 20px;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background: $color-orange;
+  color: $color-white;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single{
+	border: 1px solid #c4c4c4;
+	box-shadow: none;
+	background: $color-white;
+}
+
+.chosen-container .chosen-drop{
+	border-color: #c4c4c4;
+	border-top: 0;
+	box-shadow: none;
+	margin-top: -1px;
+}
