@@ -1,0 +1,21 @@
+/*-------------- faq -----------------*/
+.faq{
+	margin-bottom: 95px;
+
+	&__item{
+		margin-bottom: 65px;
+	}
+}
+
+.question{
+	margin-bottom: 40px;
+	
+	&__head{
+		@include font(normal, 500, 19px, 1.15, $color-text);
+		margin-bottom: 25px;
+	}
+
+	&__text{
+		@include font(normal, normal, 15px, 1.75, $color-grey);
+	}
+}

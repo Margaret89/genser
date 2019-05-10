@@ -20,7 +20,7 @@
 	}
 
 	input[type="text"],
-	input[type="mail"],
+	input[type="email"],
 	textarea{
 		height: 50px;
 		width: 100%;
@@ -37,7 +37,7 @@
 	}
 
 	input[type="text"]::placeholder,
-	input[type="mail"]::placeholder,
+	input[type="email"]::placeholder,
 	textarea::placeholder{
 		color: $color-grey;
 	}
@@ -65,13 +65,13 @@
 	&--hor &__text,
 	&--hor &__fields,
 	&--hor input[type="text"],
-	&--hor input[type="mail"],
+	&--hor input[type="email"],
 	&--hor textarea{
 		margin: 0;
 	}
 
 	&--hor input[type="text"],
-	&--hor input[type="mail"],
+	&--hor input[type="email"],
 	&--hor textarea{
 		margin-right: 30px;
 		width: 220px;

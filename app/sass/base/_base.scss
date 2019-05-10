@@ -63,8 +63,8 @@ h1,
 
 h2,
 .h2{
-	@include font(normal, bold, 32px, 1.15, $color-text);
-	margin-bottom: 40px;
+	@include font(normal, 500, 32px, 1.15, $color-text);
+	margin-bottom: 55px;
 }
 
 h3,
@@ -233,6 +233,10 @@ input[type="submit"].btn:hover,
 
 .fancybox-close-small svg path{
 	fill: $color-orange;
+}
+
+a[data-fancybox="images"]{
+	cursor: url(../img/ic-zoom.png), pointer;
 }
 
 .slimScrollBar{
