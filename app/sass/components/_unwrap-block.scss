@@ -79,3 +79,40 @@
 		min-width: 220px;
 	}
 }
+
+@media (max-width: 767px) {
+	.unwrap-block{
+		&:first-child{
+			margin-top: -1px;
+		}
+
+		&__head{
+			font-size: 15px;
+			padding: 17px 30px 22px 0;
+		}
+
+		&__head::after{
+			right: 0;
+		}
+
+		&__title{
+			font-size: 15px;
+		}
+
+		&__content,
+		&__content p,
+		&__content li{
+			font-size: 13px;
+		}
+
+		ul li,
+		ol li {
+			margin-bottom: 2px;
+		}
+
+		.btn{
+			width: 100%;
+			max-width: 290px;
+		}
+	}
+}

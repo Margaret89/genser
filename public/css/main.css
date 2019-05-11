@@ -3784,6 +3784,35 @@ ol + .unwrap-block__title {
   min-width: 220px;
 }
 
+@media (max-width: 767px) {
+  .unwrap-block:first-child {
+    margin-top: -1px;
+  }
+  .unwrap-block__head {
+    font-size: 15px;
+    padding: 17px 30px 22px 0;
+  }
+  .unwrap-block__head::after {
+    right: 0;
+  }
+  .unwrap-block__title {
+    font-size: 15px;
+  }
+  .unwrap-block__content,
+  .unwrap-block__content p,
+  .unwrap-block__content li {
+    font-size: 13px;
+  }
+  .unwrap-block ul li,
+  .unwrap-block ol li {
+    margin-bottom: 2px;
+  }
+  .unwrap-block .btn {
+    width: 100%;
+    max-width: 290px;
+  }
+}
+
 /*-------------- faq -----------------*/
 .faq {
   margin-bottom: 95px;
