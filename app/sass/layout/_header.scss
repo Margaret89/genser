@@ -11,12 +11,25 @@
 	padding-top: 25px;
 	padding-bottom: 20px;
 
+	&__logo{
+		margin-right: 10px;
+	}
+
 	&__info{
 		display: flex;
 	}
 
-	&__address{
+	&__address:not(:last-child){
 		margin-right: 50px;
+	}
+
+	&__contact-wrap{
+		display: flex;
+		align-items: center;
+	}
+
+	&__contact{
+		margin-right: 60px;
 	}
 
 	&__phone,
@@ -72,6 +85,11 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	overflow: hidden;
+
+	&.is-visible{
+		overflow: visible;
+	}
 
 	ul,
 	li{
@@ -86,6 +104,26 @@
 
 	&__item{
 		position: relative;
+	}
+
+	&__item.no-active{
+		display: none;
+	}
+
+	&__item>a{
+		white-space: nowrap;
+	}
+
+	li.top-menu__item{
+		padding: 0 10px;
+	}
+
+	li.top-menu__item:first-child{
+		padding-left: 0;
+	}
+
+	li.top-menu__item:last-child{
+		padding-right: 0;
 	}
 
 	&__item,
@@ -109,7 +147,8 @@
 		background-color: $color-orange;
 	}
 
-	&__sub{
+	&__sub,
+	&__more{
 		display: none;
 		position: absolute;
 		top: 100%;
@@ -119,25 +158,226 @@
 		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05);
 	}
 
-	&__item:hover &__sub{
+	&__more{
+		left: auto;
+		right: 0;
+		width: 180px;
+	}
+
+	&__item:hover &__sub,
+	&__item:hover &__more{
 		display: block;
 	}
 
 	&__sub-item,
-	&__sub-item a{
+	&__sub-item a,
+	&__more-item,
+	&__more-item a{
 		@include font(normal, normal, 15px, 1.15, $color-text);
 		text-decoration: none;
 	}
 
-	&__sub-item a:hover{
+	&__sub-item a:hover,
+	&__more-item a:hover{
 		color: $color-orange;
 	}
 
-	.top-menu &__sub{
+	.top-menu &__sub,
+	.top-menu &__more{
 		padding: 10px 0;
 	}
 
-	.top-menu &__sub-item{
+	.top-menu &__sub-item,
+	.top-menu &__more-item{
 		padding: 10px 15px;
+	}
+}
+
+@media (max-width: 1349px) {
+	.header-top{
+		&__info{
+			display: none;
+		}
+
+		&__contact{
+			margin-right: 30px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.header-bottom{
+		display: none;
+	}
+
+	.header-top-mobile{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 14px;
+		padding-bottom: 14px;
+
+		&__phone,
+		&__phone a{
+			@include font(normal, 500, 15px, 1.15, $color-text);
+			text-decoration: none;
+		}
+	}
+
+	.ic-hamburger{
+		width: 24px;
+		height: 20px;
+	}
+
+	.ic-hamburger span,
+	.ic-hamburger span::before,
+	.ic-hamburger span::after{
+		height: 2px;
+	}
+
+	.ic-hamburger span{
+		top: 9px;
+	}
+
+	.ic-hamburger span::before{
+		top: -9px;
+	}
+
+	.ic-hamburger span::after{
+		bottom: -9px;
+	}
+
+	.mobile-menu{
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100%;
+		// width: 87.5%;
+		width: 280px;
+		background: $color-white;
+		z-index: 100;
+		overflow-y: auto;
+		transition: right 0.3s ease;
+
+		&.open{
+			right: 0;
+		}
+
+		&__head{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 17px 15px 17px 20px;
+		}
+
+		&__title{
+			@include font(normal, 500, 15px, 1.15, $color-text);
+		}
+
+		&__title.active{
+			cursor: pointer;
+		}
+
+		&__content{
+			transform: translateX(0);
+			transition: all 0.5s ease 0s;
+			display: block;
+		}
+
+		.header-bottom,
+		.header-top__info,
+		.header-top__contact-wrap{
+			display: block;
+		}
+
+		.header-bottom{
+			padding: 0;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+
+		.top-menu{
+			display: block;
+		}
+
+		.top-menu .ic-hamburger{
+			display: none;
+		}
+
+		.top-menu__item{
+			position: relative;
+		}
+
+		.top-menu li.top-menu__item,
+		.top-menu li.top-menu__item:first-child,
+		.top-menu li.top-menu__item:last-child,
+		.top-menu li{
+			padding: 0;
+		}
+
+		.top-menu li a,
+		.top-menu a{
+			display: block;
+			padding: 10px 35px 11px 20px;
+		}
+
+		.top-menu__arr{
+			display: inline-block;
+			width: 10px;
+			height: 14px;
+			background: url(#{$path-img}/sprite.png) no-repeat -5px  -355px;
+			position: absolute;
+			top: 13px;
+			right: 15px;
+		}
+
+		.top-menu li{
+			position: static;
+		}
+
+		.top-menu ul{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 280px;
+		}
+
+		.top-menu__sub{
+			display: block;
+			padding: 0;
+			box-shadow: none;
+		}
+
+		.header-top__info,
+		.header-top__contact-wrap{
+			padding-left: 20px;
+			padding-right: 15px;
+		}
+
+		.header-top__info{
+			padding-top: 35px;
+		}
+
+		.header-top__contact-wrap{
+			padding-bottom: 35px;
+		}
+
+		.header-top__address:not(:last-child) {
+			margin-right: 0;
+		}
+
+		.header-top__address {
+			margin-bottom: 20px;
+		}
+
+		.header-top__contact {
+			margin-right: 0;
+			margin-bottom: 28px;
+		}
+
+		.btn{
+			width: 100%;
+			max-width: 240px;
+		}
 	}
 }

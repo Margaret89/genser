@@ -231,4 +231,130 @@ $(document).ready(function () {
 		$('.js-record-step[data-step='+numStep+']').addClass('active');
 	});
 
+	// Добавление пункта "Еще" в меню
+	var windowWidth = $(window).width();
+	var arrWidthMenu = [];
+	var moreMenu = false;
+
+	$('.js-top-menu-item').each(function(index){
+		var itemWidth = $(this).outerWidth();
+		arrWidthMenu.push($(this).outerWidth());
+	});
+
+	addItemMenu();
+
+	$('.js-top-menu').addClass('is-visible');
+
+	$(window).resize(function(){
+		windowWidth = $(window).width();
+		addItemMenu();
+	});
+
+	function addItemMenu() {
+		if (windowWidth >767) {
+			var moreItemMenu = 100;
+			var menuWidth = $('.js-top-menu').width() - moreItemMenu;
+			var sumItemMenu = 0;
+
+			for (var i = 0; i < arrWidthMenu.length; i++) {
+				var $curItem = $('.js-top-menu-item[data-item='+ i +']');
+				sumItemMenu = sumItemMenu + arrWidthMenu[i];
+
+				// Добавляем пункт Еще и его подпункты
+				if(sumItemMenu > menuWidth){
+					$curItem.addClass('no-active');
+
+					if (moreMenu == false) {
+						$('.js-top-menu').append('<li class="top-menu__item js-menu-more">Еще<ul class="top-menu__more js-menu-more-sub"></ul></li>');
+						moreMenu = true;
+					}
+
+					if (!$('.top-menu__more-item[data-item='+i+']').length) {
+						$('.top-menu__more-item').attr('data-item')
+						var $clone = $curItem.clone().appendTo(".js-menu-more-sub");
+						$clone.removeClass('top-menu__item js-top-menu-item no-active');
+						$clone.addClass('top-menu__more-item js-menu-more-item');
+					}
+				}else{
+					$curItem.removeClass('no-active');
+					$('.top-menu__more-item[data-item='+i+']').remove();
+				}
+			}
+
+			// Удаляем пункт Еще, если все пункты вмещаются
+			if ($('.js-menu-more-item').length == 0) {
+				$('.js-menu-more').remove();
+				moreMenu = false;
+			}
+		}else{
+			if ($('.js-menu-more').length) {
+				$('.js-top-menu-item').removeClass('no-active');
+				$('.js-menu-more').remove();
+				moreMenu = false;
+			}
+		}
+	}
+	
+	// Создание мобильного меню
+	var arrMobileMenu = [];
+	$('.js-add-mm').each(function(){
+		var indexItem = $(this).attr('data-order');
+		arrMobileMenu[indexItem] = $(this);
+	});
+
+	for (var i = 0; i < arrMobileMenu.length; i++) {
+		$(arrMobileMenu[i]).clone().appendTo('.js-mobile-menu-content');
+	}
+	
+	// Открыть/Закрыть мобильное меню
+	$('.js-open-menu').click(function(){
+		$('.js-shadow').addClass('is-visible');
+		$('.js-mobile-menu').addClass('open');
+		$('.js-body').addClass('no-scroll');
+	});
+
+	$('.js-close-menu').click(function(){
+		 closeCatMenu();
+	});
+
+	$('.js-shadow').click(function(){
+		closeCatMenu();
+	});
+
+	function closeCatMenu() {
+		$('.js-shadow').removeClass('is-visible');
+		$('.js-mobile-menu').removeClass('open');
+		$('.js-body').removeClass('no-scroll');
+	}
+
+	// Перемещение мобильного меню
+	var indentMenu = 0;
+	var levelMenu = 0;
+	var titleMobileMenu = $('.js-menu-back').text();
+
+	$('.js-top-menu-arr').on("click", function(event){
+		event.preventDefault();
+		var curItemText = $(this).siblings('.js-top-menu-text').text();
+		indentMenu = indentMenu - 100;
+		levelMenu++;
+
+		$('.js-menu-back').addClass('active');
+		$('.js-menu-back').text(curItemText);
+
+		$('.js-mobile-menu-content').css('transform','translateX('+indentMenu+'%)');
+	});
+
+	$('.js-menu-back').on("click", function(event){
+		if ($(this).hasClass('active')) {
+			indentMenu = indentMenu + 100;
+			levelMenu--;
+
+			if (levelMenu == 0) {
+				$('.js-menu-back').text(titleMobileMenu);
+				$('.js-menu-back').removeClass('active');
+			}
+
+			$('.js-mobile-menu-content').css('transform','translateX('+indentMenu+'%)');
+		}
+	});
 });

@@ -14,16 +14,18 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
-	<body>
+	<body class="js-body">
 		<div class="wrapper">
+			<div class="shadow-site d-md-none js-shadow"></div>
+			
 			<header class="header">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="header-top">
+							<div class="header-top d-none d-md-flex">
 								<div class="header-top__logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
 			
-								<div class="header-top__info">
+								<div class="header-top__info js-add-mm" data-order="2">
 									<div class="header-top__address">
 										<div class="header-top__street">ул. Добролюбова, 2Б</div>
 										<div class="header-top__subway">Бутырская</div>
@@ -38,41 +40,58 @@
 										<div class="header-top__street">Новоясеневский пр-т, 6</div>
 										<div class="header-top__subway header-top__subway--orange">Тёплый стан</div>
 									</div>
-			
+								</div>
+								
+								<div class="header-top__contact-wrap js-add-mm" data-order="3">
 									<div class="header-top__contact">
 										<div class="header-top__phone"><a href="tel:+74957857722">8 495 785 77 22</a></div>
 										<div class="header-top__time">С 9 до 21, без выходных</div>
 									</div>
+			
+									<a data-fancybox data-src="#feedback-form" href="javascript:;" class="btn btn--border">Перезвонить</a>
 								</div>
-								
-								<a data-fancybox data-src="#feedback-form" href="javascript:;" class="btn btn--border">Перезвонить</a>
 							</div>
 			
-							<nav class="header-bottom">
-								<ul class="top-menu">
-									<li class="top-menu__item">
-										<a href="#"><span class="ic-hamburger"><span></span></span>Автосервис</a>
+							<div class="header-top-mobile d-md-none">
+								<div class="header-top-mobile__logo"><a href="/"><img src="img/logo-small.svg" alt=""></a></div>
+								<div class="header-top-mobile__phone"><a href="tel:+74957857722">8 495 785 77 22</a></div>
+								<span class="ic-hamburger js-open-menu"><span></span></span>
+							</div>
+			
+							<nav class="header-bottom js-add-mm" data-order="1">
+								<ul class="top-menu js-top-menu">
+									<li class="top-menu__item js-top-menu-item" data-item="0">
+										<a href="#" class="top-menu__link"><span class="ic-hamburger"><span></span></span><span class="js-top-menu-text">Автосервис</span><span class="top-menu__arr js-top-menu-arr d-md-none"></span></a>
 			
 										<ul class="top-menu__sub">
-											<li class="top-menu__sub-item"><a href="#">Техническое обслуживание</a></li>
-											<li class="top-menu__sub-item"><a href="#">Слесарный ремонт</a></li>
-											<li class="top-menu__sub-item"><a href="#">Диагностика</a></li>
-											<li class="top-menu__sub-item"><a href="#">Шиномонтаж/Балансировка</a></li>
-											<li class="top-menu__sub-item"><a href="#">Консультация специалиста</a></li>
-											<li class="top-menu__sub-item"><a href="#">Запчасти</a></li>
+											<li class="top-menu__sub-item"><a href="#" class="top-menu__sub-link">Техническое обслуживание</a></li>
+											<li class="top-menu__sub-item"><a href="#"class="top-menu__sub-link">Слесарный ремонт</a></li>
+											<li class="top-menu__sub-item"><a href="#"class="top-menu__sub-link">Диагностика</a></li>
+											<li class="top-menu__sub-item"><a href="#"class="top-menu__sub-link">Шиномонтаж/Балансировка</a></li>
+											<li class="top-menu__sub-item"><a href="#"class="top-menu__sub-link">Консультация специалиста</a></li>
+											<li class="top-menu__sub-item"><a href="#"class="top-menu__sub-link">Запчасти</a></li>
 										</ul>
 									</li>
 			
-									<li class="top-menu__item"><a href="#">Продажа автомобилей</a></li>
-									<li class="top-menu__item"><a href="#">Страхование</a></li>
-									<li class="top-menu__item"><a href="#">Вопросы и ответы</a></li>
-									<li class="top-menu__item"><a href="#">Новости</a></li>
-									<li class="top-menu__item"><a href="#">О компании</a></li>
-									<li class="top-menu__item"><a href="#">Контакты</a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="1"><a href="#" class="top-menu__link"><span class="js-top-menu-text">Продажа автомобилей</span></a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="2"><a href="#" class="top-menu__link"><span class="js-top-menu-text">Страхование</span></a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="3"><a href="#" class="top-menu__link"><span class="js-top-menu-text">Вопросы и ответы</span></a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="4"><a href="#" class="top-menu__link"><span class="js-top-menu-text">Новости</span></a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="5"><a href="#" class="top-menu__link"><span class="js-top-menu-text">О компании</span></a></li>
+									<li class="top-menu__item js-top-menu-item" data-item="6"><a href="#" class="top-menu__link"><span class="js-top-menu-text">Контакты</span></a></li>
 								</ul>
 							</nav>
 						</div>
 					</div>
+				</div>
+			
+				<div class="mobile-menu js-mobile-menu d-md-none">
+					<div class="mobile-menu__head">
+						<div class="mobile-menu__title js-menu-back">Меню</div>
+						<span class="ic-hamburger active js-close-menu"><span></span></span>
+					</div>
+			
+					<div class="mobile-menu__content js-mobile-menu-content"></div>
 				</div>
 			</header>
 			<main>
