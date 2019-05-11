@@ -110,4 +110,8 @@
 	.repair-form-svg{
 		display: none;
 	}
+
+	.form-site-wrap + .repair-form-wrap{
+		margin-top: 0;
+	}
 }

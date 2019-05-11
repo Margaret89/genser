@@ -23,3 +23,25 @@
 		text-decoration: none;
 	}
 }
+
+@media (max-width: 767px) {
+	.gallery-wrap{
+		h1,
+		.h1{
+			margin-bottom: 37px;
+		}
+
+		.btn{
+			margin-top: 20px;
+		}
+	}
+
+
+	.gallery{
+		column-count: 1;
+
+		&__item{
+			margin-bottom: 20px;
+		}
+	}
+}

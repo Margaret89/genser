@@ -95,6 +95,26 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.map-tabs{
+		.tabs{
+			display: inline-flex;
+			position: static;
+			margin-bottom: 50px;
+		}
+	}
+
+	.map-wrap.map-wrap--tab{
+		margin-top: 0;
+	}
+
+	.map-info{
+		.btn{
+			margin-top: 30px;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.map-wrap{
 		margin-top: 60px;
@@ -102,6 +122,10 @@
 		h1,
 		.h1{
 			margin-bottom: 30px;
+		}
+
+		&--tab{
+			margin-bottom: 22px;
 		}
 	}
 
@@ -115,5 +139,45 @@
 
 	.map{
 		height: 480px;
+	}
+
+	.map-info{
+		margin-top: -14px;
+		margin-bottom: 60px;
+
+		&__item{
+			margin-bottom: 32px;
+		}
+
+		&__img{
+			width: 60px;
+			margin-right: 20px;
+		}
+
+		&__content{
+			width: calc(100% - 80px);
+		}
+
+		&__head{
+			font-size: 15px;
+		}
+
+		&__text,
+		&__text a{
+			font-size: 13px;
+		}
+
+		.btn{
+			margin-top: 6px;
+			margin-left: 0;
+			width: 100%;
+			max-width: 290px;
+		}
+	}
+
+	.map-tabs{
+		.tabs{
+			display: block;
+		}
 	}
 }
