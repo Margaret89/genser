@@ -269,6 +269,11 @@ a[data-fancybox="images"]{
 }
 
 @media (max-width: 767px) {
+	html,
+	body{
+		font-size: 13px;
+	}
+
 	.wrapper{
 		overflow: hidden;
 	}
@@ -305,7 +310,32 @@ a[data-fancybox="images"]{
 		margin-bottom: 35px;
 	}
 
+	h2,
+	.h2{
+		font-size: 17px;
+		margin-bottom: 26px;
+	}
+
 	p{
 		font-size: 13px;
+	}
+
+	p + h2,
+	p + .h2{
+		margin-top: 20px;
+	}
+
+	p + img{
+		margin-top: 18px;
+	}
+
+	img + h2,
+	img + .h2{
+		margin-top: 35px;
+	}
+
+	ul li,
+	ol li{
+		margin-bottom: 14px;
 	}
 }

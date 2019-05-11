@@ -68,3 +68,47 @@
 		color: $color-orange;
 	}
 }
+
+@media (max-width: 991px) {
+	.news-list{
+		&__item--big{
+			height: 300px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.news-list{
+		margin-top: 0;
+
+		&__item{
+			padding: 22px 20px 12px;
+			min-height: auto;
+			margin-bottom: 20px;
+		}
+
+		&__item--big &__content {
+			padding: 12px 20px;
+		}
+
+		&__item--big{
+			height: 195px;
+		}
+
+		&__head{
+			font-size: 15px;
+		}
+
+		&__date{
+			font-size: 13px;
+			margin-bottom: 9px;
+		}
+
+		&__date::before{
+			width: 13px;
+			height: 13px;
+			background-size: contain;
+			margin-top: -1px;
+		}
+	}
+}
