@@ -445,6 +445,9 @@ a[data-fancybox="images"] {
   .wrapper {
     overflow: hidden;
   }
+  main {
+    padding-top: 30px;
+  }
   .container {
     width: 100% !important;
   }
@@ -459,6 +462,10 @@ a[data-fancybox="images"] {
     font-size: 24px;
     text-align: center;
     font-weight: 500;
+  }
+  h1,
+  .h1 {
+    margin-bottom: 35px;
   }
   p {
     font-size: 13px;
@@ -1463,6 +1470,9 @@ a[data-fancybox="images"] {
 }
 
 @media (max-width: 767px) {
+  .top-slider {
+    margin-top: -30px;
+  }
   .top-slider__content {
     text-align: center;
   }
@@ -1673,6 +1683,19 @@ a[data-fancybox="images"] {
   }
   .services-page .repair-form-wrap {
     margin-top: 35px;
+  }
+  .services-detail .partner-wrap {
+    margin-top: 17px;
+  }
+  .services-detail .popular-services-wrap {
+    margin-top: 62px;
+    margin-bottom: 25px;
+  }
+  .services-detail .special-offer-wrap {
+    margin-top: 50px;
+  }
+  .services-detail .map-wrap {
+    margin-top: 45px;
   }
 }
 
@@ -2547,6 +2570,26 @@ a.bredcrumb__item:hover {
   min-width: 220px;
 }
 
+@media (max-width: 767px) {
+  .top-poster {
+    margin-top: 0;
+  }
+  .top-poster__content {
+    height: 355px;
+    padding: 30px 20px;
+  }
+  .top-poster__text {
+    font-size: 21px;
+    text-align: center;
+  }
+  .top-poster__btn {
+    margin-top: 38px;
+  }
+  .top-poster .btn {
+    margin: 0 auto 20px;
+  }
+}
+
 /*----------- repair-avto -------------*/
 .repair-avto {
   margin-top: 100px;
@@ -2626,6 +2669,39 @@ a.bredcrumb__item:hover {
 
 .repair-avto-service__list::-webkit-scrollbar-thumb {
   background-color: #eb6441;
+}
+
+@media (max-width: 991px) {
+  .repair-avto-service {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .repair-avto {
+    margin-top: 45px;
+  }
+  .repair-avto__text {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  .repair-avto .btn {
+    margin-bottom: 30px;
+  }
+  .repair-avto-service {
+    margin-bottom: 33px;
+  }
+  .repair-avto-service__item,
+  .repair-avto-service__item a {
+    font-size: 15px;
+  }
+  .repair-avto-service__item {
+    margin-bottom: 0;
+  }
+  .repair-avto-service__more {
+    font-size: 15px;
+    margin-top: 5px;
+  }
 }
 
 /*----------- about-slider -------------*/

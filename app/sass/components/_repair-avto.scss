@@ -69,3 +69,42 @@
 .repair-avto-service__list::-webkit-scrollbar-thumb {
 	background-color: $color-orange
 }
+
+@media (max-width: 991px) {
+	.repair-avto-service{
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 767px) {
+	.repair-avto {
+		margin-top: 45px;
+
+		&__text{
+			font-size: 13px;
+			margin-top: 30px;
+		}
+
+		.btn{
+			margin-bottom: 30px;
+		}
+	}
+
+	.repair-avto-service{
+		margin-bottom: 33px;
+
+		&__item,
+		&__item a{
+			font-size: 15px;
+		}
+
+		&__item{
+			margin-bottom: 0;
+		}
+
+		&__more{
+			font-size: 15px;
+			margin-top: 5px;
+		}
+	}
+}
