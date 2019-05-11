@@ -33,3 +33,29 @@
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 	}
 }
+
+@media (max-width: 767px) {
+	.special-offer-wrap{
+		margin-top: -8px;
+
+		h1,
+		.h1{
+			margin-bottom: 35px;
+		}
+	}
+
+	.special-offer{
+		margin-bottom: -10px;
+		
+		&__item{
+			height: 190px;
+			margin-bottom: 20px;
+		}
+
+		&__text{
+			padding: 17px 20px;
+			font-size: 15px;
+			line-height: 1.15;
+		}
+	}
+}

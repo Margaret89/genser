@@ -1,6 +1,11 @@
 ﻿/*----------- tabs -------------*/
 .tabs{
 	display: flex;
+	border-radius: 25px;
+
+	&--border{
+		border: 1px solid #e4e4e4;
+	}
 
 	&__item{
 		height: 50px;
@@ -23,7 +28,7 @@
 	}
 
 	&__item:not(:last-child){
-		border-right: 1px solid $color-grey;
+		border-right: 1px solid #e4e4e4;
 	}
 
 	&__item.active{
@@ -34,5 +39,25 @@
 
 	&__item:hover{
 		color: $color-orange;
+	}
+
+	&__item.active:hover{
+		color: $color-white;
+	}
+}
+
+@media (max-width: 767px) {
+	.tabs{
+		position: static;
+		display: block;
+		transform: none;
+		border-radius: 25px;
+		border: 1px solid #e4e4e4;
+		overflow: hidden;
+
+		&__item:first-child,
+		&__item:last-child{
+			border-radius: 0;
+		}
 	}
 }

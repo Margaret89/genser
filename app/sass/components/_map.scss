@@ -13,9 +13,7 @@
 	}
 }
 
-.map{
-	width: 100%;
-	height: 640px;
+.map-content{
 	position: relative;
 
 	.tabs{
@@ -26,6 +24,12 @@
 		margin: 0 auto;
 		z-index: 10;
 	}
+}
+
+.map{
+	width: 100%;
+	height: 640px;
+	position: relative;
 
 	.ymaps-2-1-73-ground-pane{
 		filter: grayscale(100%);
@@ -88,5 +92,28 @@
 		display: table;
 		margin-left: auto;
 		min-width: 240px;
+	}
+}
+
+@media (max-width: 767px) {
+	.map-wrap{
+		margin-top: 60px;
+
+		h1,
+		.h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.map-content{
+		.tabs{
+			position: static;
+			transform: none;
+			margin-bottom: 30px;
+		}
+	}
+
+	.map{
+		height: 480px;
 	}
 }

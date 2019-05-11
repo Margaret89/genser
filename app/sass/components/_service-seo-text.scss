@@ -6,3 +6,14 @@
 		@include font(normal, 500, 40px, 1.15, $color-text);
 	}
 }
+
+@media (max-width: 767px) {
+	.service-seo-text{
+		margin-top: 52px;
+		
+		&__head{
+			font-size: 21px;
+			margin-bottom: 22px;
+		}
+	}
+}

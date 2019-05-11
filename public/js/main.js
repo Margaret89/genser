@@ -65,9 +65,19 @@ $(document).ready(function () {
 
 		$topSlider.slick({
 			dots: false,
+			arrows: true,
 			infinite: true,
 			slidesToShow: 1,
 			appendArrows: $('.js-top-slider-arrow'),
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						dots: true,
+					}
+				},
+			]
 		});
 	}
 
@@ -109,6 +119,23 @@ $(document).ready(function () {
 			infinite: true,
 			slidesToShow: 7,
 			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 5,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						dots: true,
+						arrows: false,
+					}
+				},
+			]
 		});
 	}
 

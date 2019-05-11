@@ -113,3 +113,100 @@
 		text-align: center;
 	}
 }
+
+@media (max-width: 1349px) {
+	.form-site{
+		&--hor{
+			flex-wrap: wrap;
+		}
+
+		&--hor &__text{
+			width: 100%;
+			padding-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&--hor &__fields{
+			width: calc(100% - 220px);
+		}
+
+		&--hor input[type="text"],
+		&--hor input[type="email"],
+		&--hor textarea{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.form-site{
+		&--hor input[type="text"],
+		&--hor input[type="email"],
+		&--hor textarea{
+			min-width: 100px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			height: 45px;
+			padding: 0 20px;
+		}
+
+		&--hor{
+			display: block;
+			padding: 30px 0 40px;
+			box-shadow: none;
+			position: relative;
+		}
+
+		&--hor::before,
+		&--hor::after{
+			content: '';
+			display: block;
+			height: 1px;
+			background: #e4e4e4;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 -15px;
+		}
+
+		&--hor::before{
+			top: 0;
+		}
+
+		&--hor::after{
+			bottom: 0;
+		}
+
+		&--hor &__fields{
+			width: 100%;
+			display: block;
+		}
+
+		&--hor &__text{
+			font-size: 21px;
+			text-align: center;
+			margin-bottom: 27px;
+		}
+
+		&--hor input[type="text"],
+		&--hor input[type="email"],
+		&--hor textarea{
+			margin-bottom: 15px;
+		}
+
+		.btn{
+			width: 100%;
+		}
+	}
+
+	.top-slider + .form-site-wrap{
+		margin-top: -36px;
+	}
+}

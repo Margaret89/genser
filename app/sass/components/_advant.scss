@@ -33,3 +33,38 @@
 		@include font(normal, normal, 15px, 1.75, $color-grey);
 	}
 }
+
+@media (max-width: 767px) {
+	.advant-wrap{
+		margin-top: 52px;
+
+		h1,
+		.h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.advant{
+		&__item{
+			margin-bottom: 27px;
+		}
+		
+		&__img{
+			width: 60px;
+			margin-right: 20px;
+		}
+
+		&__cotent{
+			width: calc(100% - 80px);
+		}
+
+		&__head{
+			font-size: 15px
+		}
+
+		&__text{
+			font-size: 13px
+		}
+	}
+
+}

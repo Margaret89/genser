@@ -253,12 +253,6 @@ a[data-fancybox="images"]{
 	overflow: hidden;
 }
 
-@media (max-width: 767px) {
-	.container{
-		width: 100%!important;
-	}
-}
-
 .shadow-site{
 	display: none;
 	position: fixed;
@@ -272,4 +266,32 @@ a[data-fancybox="images"]{
 
 .shadow-site.is-visible{
 	display: block;
+}
+
+@media (max-width: 767px) {
+	.wrapper{
+		overflow: hidden;
+	}
+
+	.container{
+		width: 100%!important;
+	}
+
+	.btn,
+	input[type="submit"].btn{
+		height: 45px;
+		line-height: 43px;
+	}
+
+	h1,
+	.h1,
+	.h1-white{
+		font-size: 24px;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	p{
+		font-size: 13px;
+	}
 }

@@ -24,3 +24,30 @@
 		width: calc(100% - 90px);
 	}
 }
+
+@media (max-width: 767px) {
+	.popular-services-wrap{
+		margin-top: 43px;
+
+		h1,
+		.h1{
+			margin-bottom: 34px;
+		}
+	}
+
+	.popular-services{
+		&__item{
+			margin-bottom: 35px;
+		}
+		
+		&__img{
+			width: 60px;
+			margin-right: 20px;
+		}
+
+		&__text{
+			font-size: 15px;
+			width: calc(100% - 80px);
+		}
+	}
+}
