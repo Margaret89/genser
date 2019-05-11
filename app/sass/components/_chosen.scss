@@ -66,3 +66,11 @@
 	box-shadow: none;
 	margin-top: -1px;
 }
+
+@media (max-width: 767px) {
+	.chosen-container,
+	.chosen-container-single .chosen-single{
+		height: 45px;
+		line-height: 43px;
+	}
+}

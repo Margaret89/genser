@@ -338,4 +338,10 @@ a[data-fancybox="images"]{
 	ol li{
 		margin-bottom: 14px;
 	}
+
+	.btn,
+	input[type="submit"].btn{
+		height: 45px;
+		line-height: 43px;
+	}
 }
