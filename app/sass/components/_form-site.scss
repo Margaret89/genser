@@ -89,6 +89,20 @@
 	input[type="submit"].btn{
 		font-weight: 600;
 	}
+
+	input[type="text"].errorfield,
+	input[type="email"].errorfield,
+	textarea.errorfield,
+	.chosen-single.errorfield{
+		border-color:#ff0000;
+		animation: errorfield 300ms 3 alternate;
+		-webkit-animation: errorfield 300ms 3 alternate;
+	}
+}
+
+@keyframes errorfield{
+	from {border-color: #c4c4c4;}
+	to {	border-color: #ff0000;}
 }
 
 .success-alert{

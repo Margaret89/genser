@@ -20,7 +20,26 @@ $(document).ready(function () {
 				e.preventDefault();
 			});
 		}
-		
+
+		if ($('.js-select').length) {
+			var $btnSubmit = $(this).find('input[type=submit]');
+
+			$btnSubmit.click(function(){;
+				var $curForm = $(this).parents('.js-valid-form');
+
+				$curForm.find('.js-select').each(function(){
+					var attr = $(this).attr('required');
+					var selectVal = $(this).val();
+					var $chosenField = $(this).next('.chosen-container').find('.chosen-single');
+
+					if (typeof attr !== typeof undefined && attr !== false && selectVal=='') {
+						$chosenField.addClass('errorfield');
+					}else{
+						$chosenField.removeClass('errorfield');
+					}
+				});
+			});
+		}
 	});
 
 	// Верхний слайдер
@@ -209,7 +228,6 @@ $(document).ready(function () {
 		e.preventDefault();
 		$('.js-record-step').removeClass('active');
 		var numStep = $(this).data('step') + 1;
-		console.log(numStep);
 		$('.js-record-step[data-step='+numStep+']').addClass('active');
 	});
 
