@@ -229,6 +229,15 @@ $(document).ready(function () {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			vertical: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						vertical: false,
+					}
+				},
+			]
 		});
 	}
 

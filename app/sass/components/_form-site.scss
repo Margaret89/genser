@@ -209,4 +209,12 @@
 	.top-slider + .form-site-wrap{
 		margin-top: -36px;
 	}
+
+	.form-site-wrap:last-child{
+		margin-bottom: -60px;
+	}
+
+	.form-site-wrap:last-child .form-site--hor::after{
+		display: none;
+	}
 }
