@@ -370,10 +370,13 @@ $(document).ready(function () {
 
 	$('.js-top-menu-arr').on("click", function(event){
 		event.preventDefault();
+		var $curItem = $(this).parent('.js-top-menu-link');
 		var curItemText = $(this).siblings('.js-top-menu-text').text();
+		var $subMenu = $curItem.siblings('.js-top-menu-sub');
 		indentMenu = indentMenu - 100;
 		levelMenu++;
 
+		$subMenu.addClass('active');
 		$('.js-menu-back').addClass('active');
 		$('.js-menu-back').text(curItemText);
 
@@ -389,6 +392,8 @@ $(document).ready(function () {
 				$('.js-menu-back').text(titleMobileMenu);
 				$('.js-menu-back').removeClass('active');
 			}
+
+			$('.js-top-menu-sub').removeClass('active');
 
 			$('.js-mobile-menu-content').css('transform','translateX('+indentMenu+'%)');
 		}
